@@ -7,6 +7,7 @@ BUCKET_NAME = 'file-hosting-app'
 default_headers = {
 }
 
+
 def make_response(status_code, body, headers={}):
     response_headers = dict()
     response_headers.update(default_headers)
@@ -18,6 +19,7 @@ def make_response(status_code, body, headers={}):
 
 
 def download_url(key):
-    url = S3.generate_presigned_url('get_object', Params={'Bucket':BUCKET_NAME,'Key':key}, ExpiresIn=300, HttpMethod='GET')
+    url = S3.generate_presigned_url('get_object', Params={
+                                    'Bucket': BUCKET_NAME, 'Key': key}, ExpiresIn=300, HttpMethod='GET')
 
     return url

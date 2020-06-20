@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oops!</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        height: 100vh;
+      }
+
+      body > main {
+        margin: auto;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      #try-again {
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Oops!</h1>
+      <h2>You entered the wrong password... 🤦</h2>
+      <a id="try-again">Try again!</a>
+    </main>
+    <script>
+      document.getElementById("try-again").href = window.location.href;
+    </script>
+  </body>
+</html>
